@@ -109,4 +109,57 @@ let age = null; // in js, null is not a "reference to a non-existing object" or 
 
 // the code above indicates that the variable age is unknown. 
 
-// the next data type in js 
+// the next data type in js is the undefined value 
+
+// the meaning of undefined is "value not assigned"
+
+//if a variable is decaled, but not assigned, then its value is undefined
+
+let myAge;
+
+alert(myAge); // will show "undefined"
+
+// you can also explicityly assign undefined to a variable 
+
+let oldAge = 100; 
+// change the value to undefined 
+oldAge = undefined; 
+alert(oldAge); // should showed as undefined 
+
+// this is not recommended. normally, one uses null to assign an "empty" or "unknown" value to a variable, while undefined is reserved as a default initial value for unassigned things. 
+
+// the object type is special. 
+
+// all other types are considered "primitive" because their values can contain only a single thing (be it a string or a number, etc.) 
+
+// objects are used to store collections of data and more complex entities. 
+
+// there is a chapter dedicated objects that will be read at a later time 
+
+// the symbol type is used to create unique identifies for objects. Symbols are used as specific identifiers for objects. Symbols will be learned at a later date. 
+
+// the typeof operation retunrs the type of operand. it's useful when you want to process values of different types differently or just want to do a quick check. 
+
+// a call to typeof x returns a string with the type name: 
+
+typeof undefined // returns undefined 
+typeof 0 // returns number 
+typeof 10n // returns bigint 
+typeof true // returns boolean 
+typeof Symbol("id") // returns symbol 
+typeof Math // returns "object"
+typeof null // returns "object"
+typeof alert // returns "function"
+
+// Math is a built-in object that provides mathematical operations. We will learn it in the chapter Numbers. Here, it serves just as an example of an object.
+
+// The result of typeof null is "object". That’s an officially recognized error in typeof, coming from very early days of JavaScript and kept for compatibility. Definitely, null is not an object. It is a special value with a separate type of its own. The behavior of typeof is wrong here.
+
+// The result of typeof alert is "function", because alert is a function. We’ll study functions in the next chapters where we’ll also see that there’s no special “function” type in JavaScript. Functions belong to the object type. But typeof treats them differently, returning "function". That also comes from the early days of JavaScript. Technically, such behavior isn’t correct, but can be convenient in practice.
+
+// in summary there are 8 basic data types in JS
+// 1. number 2. bigint 3. string 4. boolean (true/false, yes/no) 5. null 6. undefined 7. symbol 8. object 
+
+// the typeof operator allows us to see which type is stored in a variable. (usually used as typeof x, but typeof(x) is also possible). it returns a string with the name of the type, like "string".
+
+// for null returns "object" -this is an error in the language, it's not actually an object. 
