@@ -42,6 +42,10 @@ function capitalize(string){
     return string.charAt(0).toUpperCase() +string.slice(1).toLowerCase();
 }
 
-let string = 'this is fine';
+let wordsOfLife = capitalize('thIS iS fINE');
 
-console.log(string);
+console.log(wordsOfLife);
+
+// proud of myself for figuring out how to use this function properly on my own based on the early functions i already wrote 
+
+//
