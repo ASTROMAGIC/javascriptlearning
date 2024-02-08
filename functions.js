@@ -64,3 +64,46 @@ console.log(wordAtLast);
 
 // ok my above method works and i was able to figure it out on my own. that's great. I want to try something with just the - 1 value, but i'm not sure why it doesn't work. 
 
+// keep in mind that you can also call anonymous functions, functions that have no name 
+
+(function () {
+    alert("hello");
+});
+
+function logKey(event) {
+    console.log(`You pressed "${event.key}".`);
+}
+
+textBox.addEventListener("keydown", logKey);
+
+// When a user presses a key, the browser will call the function you provided, and will pass it a parameter containing information about this event, including the particular ke that th euser pressed.
+
+// I nstead of efining a speration logKey() function, you can pass an anonymous function in addEventListener:
+
+textBox.addEventListener("keydown", function (event) {
+    console.log(`You pressed "${event.key}". `);
+})
+
+// if you pass an anonymous function like this, there's an alternative form you can use, called an arrow function. Instead of function(event), you write (event) =>:
+
+textBox.addEventListener("keydown", (event) => {
+    console.log(`You pressed "${event.key}.`);
+})
+
+// If the function only takes one parameter, you can omit parentheses around the parameter: 
+
+textBox.addEventListener("keydown", event => {
+    console.log(`You  pressed"${event.key}". `);
+})
+
+// another important thing to consider when work with functions is scope. When creating a function, the variables and other things defined inside the function are inside their seperate scope, menaing that they are locked away in their own seperate compartments, unreachable from code outside the functions. 
+
+// the top-level outside all your functions is called the global scope. Values defined in the glaobal scope are accessible from everywhere in the code. 
+
+// JS is set up like this for various reasons, mainly because of security and organization. You sometimes don't want variables to be accessible from everywhere in the code. Example being external scripts that you call in from elsewhere could start to mess with your code and cause problems beucase they happen touseing the same variable names as other parts of the code, causing conflicts. 
+
+// if you have two javascript files accessing the same html page with similar const variables called, only the const in the first value will be used. (I believe this is another example if the DOM)
+
+// keep certain parts of your code in certain enclosures, like a zoo. 
+
+// return tomorrow and do an exercise playing with scope. 
