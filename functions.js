@@ -48,4 +48,19 @@ console.log(wordsOfLife);
 
 // proud of myself for figuring out how to use this function properly on my own based on the early functions i already wrote 
 
-//
+// write a function called lastLetter that takes a string and rtunrs the verry last letter of that string
+
+function lastLetter(string){
+    return string.charAt(string.length - 1);
+}
+
+let wordAtLast = lastLetter('john');
+
+console.log(wordAtLast);
+
+// this attempt didn't work, it just return the function because the string couldn't be processed, meaning my function doesn't work. 
+
+// ok i didn't actually input the correct value for my variable and now it returns nothing. this tells me that the function isn't doing what is intended. it is literally returning nothing. 
+
+// ok my above method works and i was able to figure it out on my own. that's great. I want to try something with just the - 1 value, but i'm not sure why it doesn't work. 
+
