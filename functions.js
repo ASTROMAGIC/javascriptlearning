@@ -106,4 +106,45 @@ textBox.addEventListener("keydown", event => {
 
 // keep certain parts of your code in certain enclosures, like a zoo. 
 
-// return tomorrow and do an exercise playing with scope. 
+// return tomorrow and do an exercise playing with scope. read up on return values in functions to understand them better as well. 
+
+
+
+// it's february 21, it's been awhile since i've sat in the seat to learn more programming. but i'm here and i'm trying and that is all that matters. 
+
+// i want to do a little bit more work on functions to get a better understanding of their use 
+
+function checkAge(age) { 
+    if (age >= 18) {
+        return true; 
+    } else {
+        return confirm ('Do you have permission from your parents?');
+    }
+}
+
+let age = prompt('How old are you?', 18);
+
+if (checkAge(age)) {
+    alert('Access granted');
+} else {
+    alert('Access denied');
+}
+
+
+// I think this is a very good example and just out of my current comfort zone. It's a practical way of using a function, if else statements, and returns all at the same time. To me, this is readable. 
+
+// It is also possible to use rturn without a value. This causes the function to exit immediately. Here is an example 
+
+function showMovie(age)  {
+    if ( !checkAge(age)) {
+        return;
+    }
+   alert( "Showing you the movie");     
+}
+
+// if checkAge(age) returns false, then showMovie won't proceed to the alert. 
+
+// i think this is a good spot to chill. Tomorrow I continue on function expressions and arrow functions. I also have the javascript call stack, the problem solving page on ODP, and the "what went wrong" exercises to practice the understanding and fixing of bugs. 
+
+al
+
