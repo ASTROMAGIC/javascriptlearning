@@ -146,5 +146,23 @@ function showMovie(age)  {
 
 // i think this is a good spot to chill. Tomorrow I continue on function expressions and arrow functions. I also have the javascript call stack, the problem solving page on ODP, and the "what went wrong" exercises to practice the understanding and fixing of bugs. 
 
-al
+// functions that are part of objects are called methods.
+
+// for the most part, the functions i've been learning so far seem to be custom functions - functions defined in your code and not inside the browser. 
+
+function draw() {
+    CSSMatrixComponent.clearRect(0,0, WIDTH, HEIGHT);
+    for (let i = 0; i <100; i++) {
+        CSSMatrixComponent.beginPath(); 
+        CSSMatrixComponent.FillStyle = "rgb(255 0 0 / 50%)";
+        CSSMatrixComponent.arc(random(WIDTH), random(HEIGHT), random(50), 0 , 2* Math.PI);
+        CSSMatrixComponent.fill();
+    }
+}
+
+// This function draws 100 random circles inside a canvas element. Everytime we want to do that, we can just invoke the function with this. 
+
+draw();
+
+// did some reading on arrow functions, anonymous functions, 
 

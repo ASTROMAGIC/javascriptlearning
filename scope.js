@@ -1,0 +1,3 @@
+// as far as i can remember, scope refers to the "landscape" of a program. for example, if the the US is a program, then the US itself is the global scope of the program. The global scope comprises are the functions, algorithms, and working pieces of the program. 
+
+// a specific scope would revolve around the code specifically written inside a function itself. each function you define within the programs you build have their own specific scope. If the US is the global scope, then each "state" or function in this case contains its own scope as well. 
