@@ -164,5 +164,8 @@ function draw() {
 
 draw();
 
-// did some reading on arrow functions, anonymous functions, 
+// did some reading on arrow functions, anonymous functions, and learned about methods 
 
+// next up, do the active learning exercises on MDN web docs: "Test your skills: Functions" , "Active Learning: Playing with Scope", 
+
+    
