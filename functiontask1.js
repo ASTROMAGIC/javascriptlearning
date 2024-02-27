@@ -3,14 +3,13 @@
 
 const names = ['Chris', 'Jason', 'Hakeem', 'Dimitri', 'Anyi', 'Jade', 'Frank', 'John', 'Jimbo', 'Jaime']
 
+function random_Name(names) {
+ return names[names[Math.floor(Math.random() * names.length)]];
+}
+
+console.log(random_Name(names));
 
 
-function chooseName(){
-    return console.log(names[Math.floor(random(1,8))-1]);
-   }
+// this would be the function as concise as possible in the context of the html file. 
 
-
-
-let nameSelect = chooseName(names);
-
-console.log(nameSelect);
+// i want to write a function that a prints a random name from the provided array to the provided paragraph. 
