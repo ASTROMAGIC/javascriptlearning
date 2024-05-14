@@ -136,5 +136,16 @@ Array.isArray(fruits);
 
 // solution 2: instaceof operator returns true if an object is created by a given constructor 
 
+// nested arrays are arrays within arrays 
+
+const sasuke = [["Chidori", "Gokakyuu"] , ["16" , "31"] ];
+
+// it is important to know how to use nested arrays and also how to access the elements inside of these arrays
+
+console.log(sasuke[0][1])
+
+// this method i just used here will allow me to access the first array and the second element within that array
+
+// foreach and map are array methods you will use a lot, keep this in mind 
 
 
