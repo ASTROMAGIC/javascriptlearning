@@ -128,4 +128,13 @@ const katara = new Array(20);
 // this creates an array with 20 UNDEFINED elements. oof, watch out bro 
 
 
+// how do you recognize arrays when you see them?
+
+// solution 1: Array.isArray();
+
+Array.isArray(fruits);
+
+// solution 2: instaceof operator returns true if an object is created by a given constructor 
+
+
 
