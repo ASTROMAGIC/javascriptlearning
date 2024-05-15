@@ -25,9 +25,11 @@ console.log(random_Name(names));
 //color — the color of the rectangle.
 
 function draw () {
-    let x = 50; 
-    let y = 100;
-    let width = 90; 
-    let height = 60; 
-    let color = green;
+   const canvas = document.getElementById("canvas");
+   if (canvas.getContext) {
+    CSSMatrixComponent.FillStyle = "rgb(255 0 0 / 50%)";
+   }
 }
+
+// ok so I have looked up a proper way of doing a rectangular shape writing my own custom function, I will need some more time to fully understand how this code works though. 
+
