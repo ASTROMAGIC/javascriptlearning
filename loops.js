@@ -119,5 +119,114 @@ calculateBtn.addEventListener("click", calculate);
 clearBtn.addEventListener("click", () => (results.textContent = ""));
 
 
+// this code calculates squares for the numbers from 1 to 9, and writes out the result. The core of the code iis the for loop that performs the calculation. 
+
+// let's break down the (for (let i=1; i<9; i++))
+
+// 1. let i = 1: the counter variable, i, starts at 1. Note that we have to use let for the counter, because we're reassinging it each time we go round the loop 
+
+// 2. i < 10: keep going round the loop for as long as i is smaller than 10. 
+
+// i++: add one to i each time round the loop. 
+
+// how to loop through collections with a for loop: you can use a for loop to terate through a collection, instead of a for...of loop. 
+
+// let's look again at our for...of example above:
+
+const lovelyCats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"]
+
+for (const lovelyCat of lovelyCats) {
+    console.log(lovelyCat);
+} 
+
+// you could rewrite this code like this:
+
+const resplendentCats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
+
+for (let i=0; i < resplendentCats.length; i++) {
+    console.log(resplendentCats[i]);
+}
+
+// in this loop we're starting i at 0, and stopping when i reaches the length of the array. then inside the loop, we're using i to access each item in the array in turn. 
+
+// this works fine, and in early version of javascript, for...of didn't exist, so this was the standard way to iterate through an array. However, it offers more chances to introduce bugs into your code. 
+
+
+// example 1: you might start i at 1, forgetting that the first array index is 0, not 1. 
+
+// example 2: you might stop at i<= resplendentCats.length, forgetting that the last array index is at length -1. 
+
+// for these reasons, it's usually best to use for...of if you can. 
+
+// sometimes you will still need to use a for loop to iterate through an array. For example, in the code below we want to log a message listing our cats. 
+
+const bestCats = ["Pete", "Biggles", "Jasmine"];
+
+let myFavoriteCats = "My cats are called ";
+
+for (const cat of bestCats) {
+  myFavoriteCats += `${cat}, `;
+}
+
+console.log(myFavoriteCats); // "My cats are called Pete, Biggles, Jasmine, "
+
+// an example of a for loop used on an array and string concatenation 
+
+// notice that the end of the code ends the sentence with a comma, but you would like to end with a period as sentences should end. 
+
+// to do this you need to know when you are on the final loop iteration, and to do that you can use a for loop and example the value of i. 
+
+const caressedCats = ["Pete", "Biggles", "Jasmine"];
+
+let myAwesomeFavoriteCats = "My cats are called ";
+
+for (let i = 0; i < caressedCatscats.length; i++) {
+  if (i === caressedCats.length - 1) {
+    // We are at the end of the array
+    myAwesomeFavoriteCats += `and ${cats[i]}.`;
+  } else {
+    myAwesomeFavoriteCats += `${caressedCatscats[i]}, `;
+  }
+}
+
+console.log(myFavoriteCats); // "My cats are called Pete, Biggles, and Jasmine."
+
+// if you want to exit a loop before all the iterations have been completed, you can use the break statement. You've seen this in switch statements and used this in your rock paper scissors project. 
+
+// a break statement will immediately exit the loop and make the browser move on to any code that follows it. 
+
+// say you wanted to search through anarray of contacts and telephone numbers and return just the number we wanted to find? 
+
+const contacts = [
+    "Chris:2232322",
+    "Sarah:3453456",
+    "Bill:7654322",
+    "Mary:9998769",
+    "Dianne:9384975",
+  ];
+  const para = document.querySelector("p");
+  const input = document.querySelector("input");
+  const btn = document.querySelector("button");
+  
+  btn.addEventListener("click", () => {
+    const searchName = input.value.toLowerCase();
+    input.value = "";
+    input.focus();
+    para.textContent = "";
+    for (const contact of contacts) {
+      const splitContact = contact.split(":");
+      if (splitContact[0].toLowerCase() === searchName) {
+        para.textContent = `${splitContact[0]}'s number is ${splitContact[1]}.`;
+        break;
+      }
+    }
+    if (para.textContent === "") {
+      para.textContent = "Contact not found.";
+    }
+  });
+
+  
+
+
 
   
