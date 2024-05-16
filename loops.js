@@ -227,6 +227,44 @@ const contacts = [
 
   
 
+// here you have variable definitions and an array of the contact information you will be sort through 
+
+// an event listener is added to the button(btn) so when it's pressed some code is run to perform the search and return the results. 
+
+// the value entered in the text input is stored in the variable searchName, before emptying the text and searching for the next name. We use the method toLowerCase() on the string so that searches will be case-insensitive. 
+
+// for the for..of loop, we first split the current contact at the colon character, and store the sresult two values in an array called splitContact
+
+// we then use a condition statement to test whether splitContact[0] (the contact's name, again lower-cased with toLowerCase()) is equal to the inputted searchName. If it is we enter a string into the paragraph to report what the contact's number is, and use break to end the loop. 
+
+
+
+// skipping iterations with continue 
+
+// the continue statement works similarly to break, but instead of breaking out of the loop entirely, it skips to the next iteration of the loop. example: 
+
+const paraG = document.querySelector("p");
+const inputZ = document.querySelector("input");
+const btnZ = document.querySelector("button");
+
+btn.addEventListener("click", () => {
+  para.textContent = "Output: ";
+  const num = input.value;
+  input.value = "";
+  input.focus();
+  for (let i = 1; i <= num; i++) {
+    let sqRoot = Math.sqrt(i);
+    if (Math.floor(sqRoot) !== sqRoot) {
+      continue;
+    }
+    para.textContent += `${i} `;
+  }
+});
+
+//there is some html that goes along with this, but it isn't important here.  
+
+
+
 
 
   
