@@ -263,8 +263,85 @@ btn.addEventListener("click", () => {
 
 //there is some html that goes along with this, but it isn't important here.  
 
+// I need a bit more time to understand how a continue statement should work and should probably look at more examples of it's use in practice 
+
+// while and do...while 
+
+// there are many ways to loop code in javascript, but they currently aren't important. let's look at the while loop. here is the syntax 
+
+// initializer 
+
+while (condition) {
+  // code to run 
+
+  final-expression 
+}
+
+// you can see that this is similar to a for loop, except that the initializer variable is set before the loop, and the final-expression is included inside of the loop after the code to run. The condition is included inside the parenthese, which are precded by the while keyword rather than for. 
+
+// the same three items are still present, and they are still definied in the same order as they are in the for loop. 
+
+// the final exprssion is then run after the code inside the loop has run (an iteration has been completed) which will only happen if the condition is true. 
+
+// look again at the "cats" example, i will use a different variable this time 
+
+const dogs = ["world ender" , "mr.biggles" , "fields"];
+
+let myFavoriteDogs = "My dogs are called ";
+
+let i = 0; 
+
+while (i <dogs.length) {
+  if (i === cats.length -1) {
+    myFavoriteDogs += `and ${dogs[i]}.`;
+  } else {
+    myFavoriteDogs += `${dogs[i]}, `;
+  }
+
+  i++;
+}
+
+console.log(myFavoriteDogs); // "My dogs are called world ender, mr.biggles, and fields."
 
 
+// the do...while loop is very similar, but provides a variation on the while structure:
+
+initializer 
+do {
+  // code to run 
+
+  final=expression
+} while (condition)
+
+// in this case, the initializer again comes first, before the loop starts. the keyword directly precedes the curly braces containing the code to run and the final expression. 
+
+// the main difference between a do...while loop and a while loop is that the code inside a do...while loop is always executed at least once. That's because the condition comes after the code inside the loop. So we always run that code, then check to see if we need to run it again. In while and for loops, the check comes first, so the code might never be executed. 
+
+// let's rewirte our cat listing example again to use a do...while loop:
+
+// this time i will use birds 
+
+const birds = ["Sammy", "Claire", "Esme"];
+
+let myFavoriteBirds = "My birds are called ";
+
+let i = 0;
+
+do {
+  if (i === birds.length - 1) {
+    myFavoriteBirds += `and ${birds[i]}. `;
+  } else {
+    myFavoriteBirds += `${birds[i]}, `;
+  }
+
+  i++;
+} while (i < birds.length);
+
+console.log(myFavoriteBirds); //My birds are called Sammy, Claire, and Esme."
+
+// REMINDER: with while and do..while as with all loops you must make sure that the initializer is incrememnted or, depending on the case, decremented, so the condition eventually beccomes false. If not, the loop will go on forever, and either the browser will force it to stop, or it will crash. This is an infinite loop. 
+
+// in other words, make ending in your loops 
 
 
   
