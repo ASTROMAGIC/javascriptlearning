@@ -27,11 +27,16 @@ refused.textContent = 'Refuse: ';
 
 // so i have a for loop that goes through the entire array. IF one of those items iterated over is "Phil" or "Lola", use a conditional statement that utitilzes the refused textcontent variable. ELSE use the admitted textcontent variable. 
 
-for (let i = 0); i < people.length; i++) {
-    if (i === people.) {
-        console.log(refused);
-    }
+for (const person of people) {
+    if (person === 'Phil' || person === 'Lola') {
+        refused.textContent += `${person}, `;
+    } else {
+        admitted.textContent += `${person}, `; 
+    }    
     
 }
 
+
 // so this type of for loop could work, but let me try for of 
+
+// ok so in the end my loop maybe could have worked in theory and i really did try to get it, but this solution was more intuitive than where i was going 
