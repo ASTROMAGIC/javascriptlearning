@@ -18,7 +18,7 @@ content.textContent = "This is the glorious text-content!";
 
 container.appendChild(content);
 
-// in the javascript file, first we get a reference to the container div that already exists in our HTML. Then we create a new di v and store it in the variable content. We add a class and some text to the content div and finally append that div to container. After the favascript code is run, our DOM tree will look like this:
+// in the javascript file, first we get a reference to the container div that already exists in our HTML. Then we create a new div and store it in the variable content. We add a class and some text to the content div and finally append that div to container. After the javascript code is run, our DOM tree will look like this:
 
 // <!-- The DOM -->
 <body>
