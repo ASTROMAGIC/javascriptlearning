@@ -20,9 +20,7 @@ button.addEventListener("click", ()=> {
     const myItem = input.value;
     input.value = '';
 
-})
-
-// the initial idea for the my button event listener was somewhat right, but I did not know that an input value for a variable could be written like this 
+    // the initial idea for the my button event listener was somewhat right, but I did not know that an input value for a variable could be written like this 
 
 const listItem = document.createElement("li");
 const listText = document.createElement("span");
@@ -46,9 +44,6 @@ listBtn.addEventListener("click", ()=>{
 });
 
 input.focus();
+});
 
-// this is my first attempt and this dynamic shopping list. I will put this on github and compare with a proper solution. 
-
-// ok the added items are not showing up 
-
-// update I have update the code to matchup will the solution, let's see if it works. 
+// I had the entire structure of this program incorrect. It seems I need to work on reading the syntax of JS better in order avoid early bugs. 
