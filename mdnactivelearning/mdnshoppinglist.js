@@ -40,7 +40,7 @@ list.appendChild(listItem);
 
 
 listBtn.addEventListener("click", ()=>{
-    list.remove(listItem);
+    list.removeChild(listItem);
 });
 
 input.focus();
