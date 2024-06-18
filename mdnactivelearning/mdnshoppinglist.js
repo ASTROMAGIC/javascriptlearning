@@ -29,7 +29,7 @@ const listBtn = document.createElement("button");
 // I see that it is a good idea to group my variables that are being called together at the same time. It may also be a good idea to change the name of the variables together once I get a better idea of how the javascript file will look in context. 
 
 
-listBtn.textContent = "Delete";
+
 
 listItem.appendChild(listText);
 list.textContent = myItem;
