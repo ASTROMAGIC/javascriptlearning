@@ -122,3 +122,46 @@ audioUser.age = 25; // adding one more property
 for ( let prop in audioUser) {
     alert ( prop ); // name, surname, age 
 }
+
+// you can fix the issue with with the phone codes by "cheating". you do this by making the codes non-integers. Adding a plus "+" sign before each code is enough. 
+
+
+let newCodes = {
+    "+49": "Germany",
+    "+41": "Switzerland",
+    "+44": "Great Britain",
+    // ..,
+    "+1": "USA"
+  };
+  
+  for (let code in newCodes) {
+    alert( +code ); // 49, 41, 44, 1
+  }
+
+  
+  
+  
+  
+  // in summary, objects are associative arrays with several special features. 
+
+  // they store in key-value pairs where: 
+
+  // property keys must be strings or symbols (usually strings)
+
+  // values can be any type 
+
+  // to access properties we can use: 
+
+  newCodes.property // dot notation 
+
+  audioUser["property"]; // square brackets notation, which allow taking the key from a variable
+
+// addition operators 
+
+delete newUser.prop // deletes a property 
+
+"key" in newUser // checks if a proprty with the given key exists, returns a boolean value 
+
+for ( let key in newUser) {
+
+} // iterates over an object using a for loop
