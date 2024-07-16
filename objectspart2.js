@@ -110,6 +110,72 @@ let shinyBag = {
     [shinyFruit + 'Computers']: 5 // bag.appleComputers = 5 
 }
 
+// it goes without saying that square brackets are much more powerful that dot notation. They allow any property names and variables. But they are  more cumbersome to write. 
+
+// most of the time, when property names are known and simple, the dot is used. And if we need something more complex, then we switch to square brackets. 
+
+// in real code, we often use existing variables as values for propert names. 
+
+// for example 
+
+function makeUser(name, age) {
+    return {
+        name: name,
+        age: age,
+        //.. and other properties you may want to add
+    };
+}
+let visionaryUser = makeUser("Stephen", 35);
+
+alert(visionaryUser.name); // Stephen 
+
+// in this example, proprties have the same names as variables. The use-case of making a property from a variable is so common, that there's a special property value shorthand to make it shorter. 
+
+// imagine the function above as the same as the one you will write below with this shorthand in mind 
+
+
+function createUser(name, age) {
+    return {
+        name, 
+        age, 
+    };
+}
+
+// We can use both normal properties and shorthands in the same object:
+
+let happyUser = {
+    name, 
+    age: 30
+}; 
+
+// property names do have some limitations. As we already know, a variable cannot have a name equal to one of the language-reserved words like "for" and "let" or "return"
+
+// for objects, there is no such restriction. 
+
+let obj = {
+    for: 1,
+    let: 2,
+    return: 3
+}; 
+
+alert( obj.for + obj.let + obj.return); //6 
+
+// property names have no limitations and they can be any strings or symbols ( a special type for identifies, to be covered later)
+
+// other types are automatically converted to strings. 
+
+// for example a number 0 becomes a string "0" when used as a property key:
+
+let newObj = {
+    0: "test", // same as "0": "test"
+}; 
+
+// both alerts access the same property (the number 0 is converted to string "0")
+
+alert( newObj["0"]);
+
+alert( newObj[0]); //test these respective outputs 
+
 
 
 
