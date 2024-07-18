@@ -75,10 +75,32 @@ console.table(sleakOrdered);
 // array.prototype.reduce()
 // 4. how many years did all the inventors live?
 
+const totalYears = inventors.reduce((total, inventor) => {
+    return total + (inventor.passed - inventor.year);
+}, 0);
+
+console.log(totalYears);
+
+// I definitely need to go back to understand how this works and how to use it. 
+
+
 // sort the invetors by years lived 
+
+
+const oldest = inventors.sort(function(a, b) {
+    const lastGuy = a.passed - a.year;
+    const nextGuy = b.passed - b.year; 
+    return lastGuy > nextGuy ? -1 : 1; 
+});
+
+console.table(oldest);
 
 // 6. create a list of boulevards in paris that contain 'de' anywhere in the name 
 // https://en.wikipedia.org/wiki/category:boulevards_in_paris 
+
+// this is a very good exercises that will make you use dev tools and DOM interpretation. you will also use document.queryselector 
+
+// start from number 6 next study session.
 
 // 7. sort exercise 
 // sort the people alphabetically by last name 
