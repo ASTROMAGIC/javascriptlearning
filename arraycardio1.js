@@ -100,12 +100,76 @@ console.table(oldest);
 
 // this is a very good exercises that will make you use dev tools and DOM interpretation. you will also use document.queryselector 
 
+// first you need to get the dom elements out of the page. Use Document.queryselector. What do you select?
+
+const category = document.querySelector('.mw-category');
+
+// find the links within it 
+
+const links = Array.from(category.querySelectorAll('a'));
+
+// note:queryselectory returns a node list, but for this method to work you need the items you're working with to be array items. there are a couple of ways you can do this: 
+
+// method 1 will be featured and I will make another const variable with the second method. I think array.from is more readable. 
+
+// here is method 2: a spread 
+
+const arrayLinks = [...category.querySelectorAll('a')];
+
+// you can call queryselector for any exist dom element, remember this when trying a similar method with other online items. this can also be done in one step
+
+// first you need to convert this list of links into a list of names. then filter the names into a list that contain "de"
+
+const de = links                                                                                                                            .map(link => link.textContent)
+.filter(streetName => streetName.includes('de'));
+
+// writing 'de' into the console gives the street names, you can use map and ten filter to perform you operation in one variable 
+
 // start from number 6 next study session.
 
 // 7. sort exercise 
 // sort the people alphabetically by last name 
 
+// this exercise will use the people constant 
+
+const alpha = people.sort(function(lastOne, nextOne){
+    const [aLast, aFirst] = lastOne.split(', ');
+    const [bLast, bFirst] = nextOne.split(', ');
+    return aLast > bLast ? 1 : -1;
+    
+    
+    
+})
+
+console.log(alpha);
+
+
+
+// the last names are what will determine the order. the first names are only present so that they may be written with the last names. 
+
+// notice that these array methods are usually utilizing const variables, then arrow functions with a period to activate the array method that will be utilized. you need to practice these methods with a variety of situations to see as many outcomes as possible. this is how you will get comfortable using them
+
 // 8. reduce exercise 
+
+//sum up the instances of each of these 
+
+const data = ['car', 'car', 'truck', 'truck','bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck']; 
+
+// reduce is a very flexible method, this is just one of the ways you can use it 
+
+const transportation = data.reduce(function(obj, item) {
+    if(!obj[item]) {
+        obj[item] = 0;
+    }
+    obj[item]++;
+    return obj;
+
+
+}, {});
+
+console.log(transportation);
+
+// start with a blank object, we see if there is a 0 to work with, then we increment to count it. 
 
 
 
